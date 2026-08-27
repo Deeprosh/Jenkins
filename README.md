@@ -1,4 +1,3 @@
-# Jenkins Installation and implementation  
 # Jenkins Installation & CI/CD Setup
 
 A hands-on guide to installing and configuring **Jenkins on an AWS EC2 instance**, integrating Docker as an agent, creating CI/CD pipelines, and deploying applications to Kubernetes.
