@@ -45,8 +45,11 @@ Jenkins will be installed on an Ubuntu EC2 instance.
 > ⚠️ For learning purposes, you may temporarily use `0.0.0.0/0` for port `8080`, but restricting access to your IP address is more secure.
 ## Step 2: Connecting to EC2 Instance through SSH
 ```
+sudo cp "/mnt/c/Users/Roshini somireddy/Downloads/jen.pem" ~/.ssh
+
 chmod 400 pemfile name
-ssh -i "pemfile path" ubuntu@ec2 public ip address
+
+sudo ssh -i "pemfile path" ubuntu@ec2 public ip address
 ```
 
 Challenges faced: 
