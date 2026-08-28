@@ -54,7 +54,10 @@ sudo ssh -i "pemfile path" ubuntu@ec2 public ip address
 
 Challenges faced: 
 Need to unblock pem file using its properties.
-I'm using wsl terminal in my windows 11 laptop, i copied the path to folder first then tried ssh, it helped me to understand how things actually work in WSL.
+I'm using wsl terminal in my windows 11 laptop, i copied the path to folder first then tried ssh, it helped me to understand how things actually work in WSL.  
+
+<img width="1085" height="742" alt="image" src="https://github.com/user-attachments/assets/141e9e57-5271-4a66-a246-b3b9d627e61c" />
+
 
 ---
 
