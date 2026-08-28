@@ -31,6 +31,7 @@ Jenkins will be installed on an Ubuntu EC2 instance.
 6. Choose an appropriate instance type.
 7. Create or select an existing key pair.
 8. Configure the Security Group.
+9. Configure your internet gateway as well which should be attached to your VPC else it wont let you connect with anything.(This is the biggest challenge i faced when connecting to EC2 instance)
 
 ### Recommended Inbound Rules
 
