@@ -32,6 +32,8 @@ Jenkins will be installed on an Ubuntu EC2 instance.
 7. Create or select an existing key pair.
 8. Configure the Security Group.
 9. Configure your internet gateway as well which should be attached to your VPC else it wont let you connect with anything.(This is the biggest challenge i faced when connecting to EC2 instance)
+<img width="1561" height="330" alt="image" src="https://github.com/user-attachments/assets/df6dd3ae-c97d-4f3c-b86c-8cee56532596" />
+
 
 ### Recommended Inbound Rules
 
@@ -41,6 +43,15 @@ Jenkins will be installed on an Ubuntu EC2 instance.
 | Custom TCP | 8080 | Your IP address |
 
 > ⚠️ For learning purposes, you may temporarily use `0.0.0.0/0` for port `8080`, but restricting access to your IP address is more secure.
+## Step 2: Connecting to EC2 Instance through SSH
+```
+chmod 400 pemfile name
+ssh -i "pemfile path" ubuntu@ec2 public ip address
+```
+
+Challenges faced: 
+Need to unblock pem file using its properties.
+I'm using wsl terminal in my windows 11 laptop, i copied the path to folder first then tried ssh, it helped me to understand how things actually work in WSL.
 
 ---
 
