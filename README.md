@@ -80,7 +80,7 @@ sudo apt update
 Install OpenJDK 17:
 
 ```bash
-sudo apt install -y openjdk-17-jre
+sudo apt install fontconfig openjdk-21-jre
 ```
 
 Verify the installation:
