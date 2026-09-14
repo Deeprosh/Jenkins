@@ -23,15 +23,20 @@ Jenkins will be installed on an Ubuntu EC2 instance.
 
 ## Step 1: Launch an EC2 Instance
 
-1. Log in to the **AWS Management Console**.
-2. Navigate to **EC2**.
-3. Click **Instances**.
-4. Click **Launch instances**.
-5. Select **Ubuntu Server** as the operating system.
-6. Choose an appropriate instance type.
-7. Create or select an existing key pair.
-8. Configure the Security Group.
-9. Configure your internet gateway as well which should be attached to your VPC else it wont let you connect with anything.(This is the biggest challenge i faced when connecting to EC2 instance)
+- Log in to the **AWS Management Console**.
+- Before creating an EC2 instance make sure to configure Network settings first by starting with **VPC**, create a **subnet** and also create a **Internet gateway**.  
+- After creating these things make sure you attach your internet gateway to your VPC.  
+- Also Edit the routes or add the routes to **routetable** to connect with **IGW**. Go to route tables, click on route and select edit routes options and add the Destination to 0.0.0.0/0, set Target to Internet Gateway, then pick your IGW and save the changes.  
+- Go to subnet and edit the subnet settings by selecting **YES** option to **enable auto-assign public IP**.
+- This is how you need to configure your network setting before launching an EC2 instance and allocating these settings to your EC2.  
+- Navigate to **EC2**.
+- Click **Instances**.
+- Click **Launch instances**.
+- Select **Ubuntu Server** as the operating system.
+- Choose an appropriate instance type.
+- Create or select an existing key pair.
+- Configure the Security Group.
+- Configure your internet gateway as well which should be attached to your VPC else it wont let you connect with anything.(This is the biggest challenge i faced when connecting to EC2 instance)  
 <img width="1561" height="330" alt="image" src="https://github.com/user-attachments/assets/df6dd3ae-c97d-4f3c-b86c-8cee56532596" />
 
 
@@ -40,6 +45,7 @@ Jenkins will be installed on an Ubuntu EC2 instance.
 | Type       | Port | Source          |
 | ---------- | ---: | --------------- |
 | SSH        |   22 | Your IP address |
+| HTTPS      |  443 | Your IP address |
 | Custom TCP | 8080 | Your IP address |
 
 > ⚠️ For learning purposes, you may temporarily use `0.0.0.0/0` for port `8080`, but restricting access to your IP address is more secure.
